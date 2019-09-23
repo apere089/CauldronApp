@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="fiu.team5cen4010.cauldron">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/cauldron_icon_square"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/cauldron_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme_Orange">
+        <activity
+            android:name=".TitleActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Adapter.RecipeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdvancedSearch.AdvancedSearch"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".HomeScreen.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".Profile.ProfileActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

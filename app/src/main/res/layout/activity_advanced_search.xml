@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdvancedSearch.AdvancedSearch">
+
+
+    <RelativeLayout
+        android:id="@+id/AdvancedSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_advancedsearch"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        >
+
+        <TextView
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="42dp"
+            android:text="____________________________________________"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Ingredients -->
+        <TextView
+            android:id="@+id/searchByIngredients"
+            android:layout_width="354dp"
+            android:layout_height="132dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="62dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="onClickByIngredients"
+            android:padding="5dp"
+            android:paddingBottom="15dp"
+            android:text="By Ingredients"
+            android:textSize="30dp"
+            android:textStyle="normal"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/buttonIngredients"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/searchByIngredients"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickByIngredients"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/dropdown"
+            android:background="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/buttonSearchIngredients"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/searchByIngredients"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickSearchByIngredients"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/search1"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <!--content to hide/show -->
+        <EditText
+            android:id="@+id/ingredient1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByIngredients"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="90dp"
+            android:ems="9"
+            android:hint="Ingredient 1"
+            android:inputType="text"
+            android:visibility="gone" />
+
+
+        <EditText
+            android:id="@+id/ingredient2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByIngredients"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="120dp"
+            android:ems="9"
+            android:hint="Ingredient 2"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/ingredient3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByIngredients"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="150dp"
+            android:ems="9"
+            android:hint="Ingredient 3"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imagebyIngredients"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="110dp"
+            android:clickable="true"
+            android:onClick="onClickByIngredients"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/byingredientsicon" />
+
+        <TextView
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="184dp"
+            android:text="____________________________________________"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Calories -->
+        <TextView
+            android:id="@+id/searchByCalories"
+            android:layout_width="354dp"
+            android:layout_height="115dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="206dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="onClickByCalories"
+            android:padding="5dp"
+            android:paddingBottom="15dp"
+            android:text="By Calories"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+
+        <ImageButton
+            android:id="@+id/buttonCalories"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/searchByCalories"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="215dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickByCalories"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/dropdown"
+            android:background="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/buttonSearchCalories"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/searchByCalories"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="255dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickSearchByCalories"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/search1"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <!--content to hide/show -->
+        <EditText
+            android:id="@+id/calories_ET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByCalories"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="275dp"
+            android:ems="9"
+            android:hint="Max Calories"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imagebyCalories"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="250dp"
+            android:clickable="true"
+            android:onClick="onClickByCalories"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/bycaloriesicon" />
+
+        <TextView
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="311dp"
+            android:text="____________________________________________"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Nutrition -->
+        <TextView
+            android:id="@+id/searchByNutrition"
+            android:layout_width="354dp"
+            android:layout_height="136dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="333dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="onClickByNutrition"
+            android:padding="5dp"
+            android:paddingBottom="15dp"
+            android:text="By Nutrition"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+
+        <ImageButton
+            android:id="@+id/buttonNutrition"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/searchByNutrition"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="347dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickByNutrition"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/dropdown"
+            android:background="@color/white" />
+
+        <ImageButton
+            android:id="@+id/buttonSearchNutrition"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/searchByNutrition"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="395dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickSearchByNutrition"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/search1"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <!--content to hide/show -->
+        <EditText
+            android:id="@+id/fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByNutrition"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="365dp"
+            android:ems="9"
+            android:hint="Max Fat"
+            android:inputType="text"
+            android:visibility="gone" />
+
+
+        <EditText
+            android:id="@+id/protein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByNutrition"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="395dp"
+            android:ems="9"
+            android:hint="Max Protein"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/carbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByNutrition"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="425dp"
+            android:ems="9"
+            android:hint="Max Carbs"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imagebyNutrition"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="380dp"
+            android:clickable="true"
+            android:onClick="onClickByNutrition"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/bynutritionicon" />
+
+        <TextView
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="459dp"
+            android:text="____________________________________________"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Cost -->
+        <TextView
+            android:id="@+id/searchByCost"
+            android:layout_width="354dp"
+            android:layout_height="122dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="482dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="onClickByCost"
+            android:padding="5dp"
+            android:paddingBottom="15dp"
+            android:text="By Cost"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+
+        <ImageButton
+            android:id="@+id/buttonCost"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/searchByCost"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="492dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickByCost"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/dropdown"
+            android:background="@color/white" />
+
+        <ImageButton
+            android:id="@+id/buttonSearchCost"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/searchByCost"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="530dp"
+            android:layout_marginRight="30dp"
+            android:onClick="onClickSearchByCost"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/search1"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <!--content to hide/show -->
+        <EditText
+            android:id="@+id/cost_ET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchByCost"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="551dp"
+            android:ems="9"
+            android:hint="Max Cost"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imagebyCost"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="520dp"
+            android:clickable="true"
+            android:onClick="onClickByCost"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/bycosticon" />
+
+        <TextView
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="591dp"
+            android:text="____________________________________________"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/advanced_search_getallrecipes"
+            style="@style/rounded_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="621dp"
+            android:layout_marginEnd="22dp"
+            android:onClick="onClickGetAllRecipes"
+            android:text="Discover Our Full Recipe Collection!"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </RelativeLayout>
+
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/search_bar_advancedSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:mt_hint="Search"
+        app:mt_speechMode="false"></com.mancj.materialsearchbar.MaterialSearchBar>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation_advancedSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:background="#FFAE19"
+        android:theme="@style/Base.Theme.AppCompat"
+        app:menu="@menu/nav">
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

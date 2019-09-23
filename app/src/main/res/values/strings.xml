@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Cauldron</string>
+    <string name="title">Cauldron Boi</string>
+    <string name="usernameInput">Username</string>
+    <string name="passwordInput">Password</string>
+    <string name="signUpBtn">Sign Up</string>
+    <string name="logInBtn">Log In</string>
+    <string name="signUpTitle">Create an Account</string>
+    <string name="signUsername">Username</string>
+    <string name="confirmPassInput">Confirm Password</string>
+    <string name="btnRegister">Register</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="new_text">New</string>
+    <string name="meatLasagna">Mean Lasagna</string>
+    <string name="popularText">Popular</string>
+    <string name="title_activity_nav_home">nav_home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+</resources>
